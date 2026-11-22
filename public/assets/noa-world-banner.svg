@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title description">
+  <title id="title">Noa's Little World</title>
+  <desc id="description">A family-made world of stars, a moon, and gentle colors.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#101729"/>
+      <stop offset="1" stop-color="#253c54"/>
+    </linearGradient>
+    <linearGradient id="hills" x1="0" x2="1">
+      <stop offset="0" stop-color="#397a83"/>
+      <stop offset="1" stop-color="#78a88e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#sky)"/>
+  <circle cx="930" cy="112" r="52" fill="#f3d9b6"/>
+  <circle cx="950" cy="96" r="52" fill="#17243a"/>
+  <g fill="#c8ddeb">
+    <path d="m786 72 6 15 15 6-15 6-6 15-6-15-15-6 15-6z"/>
+    <path d="m1080 172 4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+    <circle cx="1010" cy="58" r="3"/>
+    <circle cx="864" cy="168" r="3"/>
+    <circle cx="1125" cy="91" r="2"/>
+  </g>
+  <path d="M0 278c162-71 314-71 472 0s309 73 465 0 191-61 263-38v120H0z" fill="#315a70"/>
+  <path d="M0 312c174-78 332-77 499 0s320 68 473 0 177-49 228-27v75H0z" fill="url(#hills)"/>
+  <text x="78" y="146" fill="#b9dbe0" font-family="Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="5">A FAMILY-MADE LITTLE WORLD</text>
+  <text x="74" y="220" fill="#fff" font-family="Georgia,serif" font-size="58">Noa's Little World</text>
+</svg>

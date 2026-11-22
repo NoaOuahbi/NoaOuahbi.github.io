@@ -1,30 +1,75 @@
 # Noa's Little World
 
-A family-managed GitHub Pages site celebrating imagination, curiosity, and
-everyday moments. It is a small, static website with no accounts, comments,
-contact forms, analytics, or visitor-data collection.
+<p align="center">
+  <img src="./public/assets/noa-world-banner.svg" width="100%" alt="Noa's Little World: a family-made world of stars and gentle colors" />
+</p>
 
-## Project structure
+A family-managed website for little moments, playful discovery, stories, and
+music. It uses the same responsive, multi-page React/Vite structure as the
+source profile site, adapted for Noa and designed to keep childhood private.
+
+## Pages and project structure
+
+| Page | Purpose |
+|---|---|
+| `index.html` | Home, discovery cards, language starters, and music player |
+| `about.html` | Family-managed project information |
+| `timeline.html` | A privacy-conscious collection of memory themes |
+| `protectedUSERS_root_path_secure/` | Optional guardian-only sign-in |
 
 ```text
-index.html    Accessible, responsive home page
-styles.css    Site layout, colors, and illustrations
-LICENSE       MIT License for the source code
+src/                         React pages, components, and shared styling
+api/                         Optional guardian sign-in API and Prisma schemas
+starters/                    Small examples in eight programming languages
+public/                      Static files and generated language metrics
+scripts/                     Language-metrics generation
+.github/workflows/           GitHub Pages and starter validation
 ```
 
-## Local preview
+## Development
 
-Open `index.html` in a browser, or serve this folder with any static file
-server. No package installation or build step is required.
+```powershell
+npm ci
+npm run dev
+npm run build
+```
 
-## Privacy
+The optional API has separate setup steps in [`api/README.md`](./api/README.md).
+The GitHub Pages site works without the API; family sign-in is unavailable
+until an API and OAuth app are configured.
 
-The site is managed by family. It intentionally avoids publishing exact age,
-school, location, routines, contact details, or personal account information.
-Only guardian-approved media should be added.
+## Privacy and family access
+
+- The public pages do not publish an exact age, school, location, routine,
+  contact details, or personal social profile.
+- Do not create or use a child account for sign-in. The optional family area
+  must be restricted to guardian-approved adult GitHub logins through
+  `ALLOWED_GITHUB_LOGINS`; access is denied when the allowlist is empty.
+- Music selected from a device stays in that browser. The shared playlist is
+  empty by default.
+- Do not commit credentials. Use ignored local `.env` files or host secrets.
+- Add only family-approved media and content.
+
+See [`SECURITY.md`](./SECURITY.md) for reporting and configuration details.
+
+## Language metrics
+
+<!-- language-metrics:start -->
+| Language | Equal starter share | Measured source share | Files | File types | Starter |
+|----------|---------------------|-----------------------|-------|------------|---------|
+| 🦀 Rust | 12.5% | 2.3% | 1 | `.rs` | [Open](./starters/rust/README.md) |
+| 🐹 Go | 12.5% | 2.0% | 2 | `.go` | [Open](./starters/go/README.md) |
+| 🐍 Python | 12.5% | 4.6% | 4 | `.py` | [Open](./starters/python/README.md) |
+| 🔷 TypeScript | 12.5% | 63.4% | 20 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
+| ⚡ JavaScript | 12.5% | 2.0% | 4 | `.js, .mjs, .cjs` | [Open](./starters/javascript/README.md) |
+| 🗃️ SQL | 12.5% | 1.6% | 5 | `.sql` | [Open](./starters/sql/README.md) |
+| 🎨 CSS | 12.5% | 22.5% | 3 | `.css` | [Open](./starters/css/README.md) |
+| 🌐 HTML | 12.5% | 1.6% | 2 | `.html, .htm` | [Open](./starters/html/README.md) |
+<!-- language-metrics:end -->
+
+Metrics are generated before development and production builds with
+`npm run generate:language-metrics`.
 
 ## License
 
-The source code is released under the MIT License. The project name, branding,
-and any separately protected creative materials are not included in that
-license. See [LICENSE](./LICENSE).
+Source code is released under the MIT License. See [`LICENSE`](./LICENSE).
