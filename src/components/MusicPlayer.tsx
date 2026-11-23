@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Disc3, ListMusic, Music2, Pause, Play, Plus, SkipBack, SkipForward, Trash2, Upload, Volume2, X } from 'lucide-react';
 import { PUBLIC_PLAYLIST } from '../music/playlist';
-import { addDeviceTracks, readDeviceTracks, removeDeviceTrack, type StoredDeviceTrack } from '../music/library';
+import { addDeviceTracks, chooseAudioFiles, readDeviceTracks, removeDeviceTrack, type StoredDeviceTrack } from '../music/library';
 
 const PLAYER_KEY = 'noa-world:player';
 const PRIVATE_URLS_KEY = 'noa-world:private-urls';
@@ -414,8 +414,8 @@ export default function MusicPlayer() {
     }
   };
 
-  const addFiles = async (files: FileList | null) => {
-    if (!files?.length) return;
+  const addFiles = async (files: ArrayLike<File> | null) => {
+    if (!files || files.length === 0) return;
     const audioFiles = Array.from(files).filter((file) => file.type.startsWith('audio/'));
     if (!audioFiles.length) {
       setMessage('Choose one or more audio files.');
@@ -434,6 +434,20 @@ export default function MusicPlayer() {
       setMessage(error instanceof Error ? error.message : 'The selected music could not be saved.');
     } finally {
       if (fileInput.current) fileInput.current.value = '';
+    }
+  };
+
+  const openAudioPicker = async () => {
+    try {
+      const files = await chooseAudioFiles();
+      if (files === null) {
+        fileInput.current?.click();
+        return;
+      }
+      await addFiles(files);
+    } catch (error) {
+      if (error instanceof DOMException && error.name === 'AbortError') return;
+      setMessage(error instanceof Error ? error.message : 'The selected audio files could not be opened.');
     }
   };
 
@@ -576,7 +590,7 @@ export default function MusicPlayer() {
             )) : <p className="empty-library">No tracks yet. Add music you have permission to use.</p>}
           </div>
           <div className="add-music">
-            <button type="button" className="secondary-button" onClick={() => fileInput.current?.click()}><Upload size={15} /> Add audio files</button>
+            <button type="button" className="secondary-button" onClick={() => void openAudioPicker()}><Upload size={15} /> Add audio files</button>
             <input ref={fileInput} className="visually-hidden" type="file" accept="audio/*" multiple onChange={(event) => void addFiles(event.currentTarget.files)} />
             <form className="url-form" onSubmit={addUrl}>
               <label htmlFor="track-title">Save an audio URL to this device</label>

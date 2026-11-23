@@ -1,0 +1,17 @@
+{
+  "id": "/",
+  "name": "Noa's Little World",
+  "short_name": "Noa",
+  "description": "A family-managed little world for curiosity, imagination, and everyday moments.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#050608",
+  "theme_color": "#050608",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

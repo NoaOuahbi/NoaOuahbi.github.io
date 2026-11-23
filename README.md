@@ -57,18 +57,28 @@ See [`SECURITY.md`](./SECURITY.md) for reporting and configuration details.
 <!-- language-metrics:start -->
 | Language | Equal starter share | Measured source share | Files | File types | Starter |
 |----------|---------------------|-----------------------|-------|------------|---------|
-| 🦀 Rust | 12.5% | 2.2% | 1 | `.rs` | [Open](./starters/rust/README.md) |
-| 🐹 Go | 12.5% | 2.0% | 2 | `.go` | [Open](./starters/go/README.md) |
-| 🐍 Python | 12.5% | 4.6% | 4 | `.py` | [Open](./starters/python/README.md) |
-| 🔷 TypeScript | 12.5% | 63.6% | 20 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
-| ⚡ JavaScript | 12.5% | 2.0% | 4 | `.js, .mjs, .cjs` | [Open](./starters/javascript/README.md) |
-| 🗃️ SQL | 12.5% | 1.6% | 5 | `.sql` | [Open](./starters/sql/README.md) |
-| 🎨 CSS | 12.5% | 22.4% | 3 | `.css` | [Open](./starters/css/README.md) |
-| 🌐 HTML | 12.5% | 1.6% | 2 | `.html, .htm` | [Open](./starters/html/README.md) |
+| 🦀 Rust | 12.5% | 1.8% | 1 | `.rs` | [Open](./starters/rust/README.md) |
+| 🐹 Go | 12.5% | 1.6% | 2 | `.go` | [Open](./starters/go/README.md) |
+| 🐍 Python | 12.5% | 3.7% | 4 | `.py` | [Open](./starters/python/README.md) |
+| 🔷 TypeScript | 12.5% | 60.1% | 21 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
+| ⚡ JavaScript | 12.5% | 1.6% | 4 | `.js, .mjs, .cjs` | [Open](./starters/javascript/README.md) |
+| 🗃️ SQL | 12.5% | 1.4% | 5 | `.sql` | [Open](./starters/sql/README.md) |
+| 🎨 CSS | 12.5% | 28.5% | 4 | `.css` | [Open](./starters/css/README.md) |
+| 🌐 HTML | 12.5% | 1.3% | 2 | `.html, .htm` | [Open](./starters/html/README.md) |
 <!-- language-metrics:end -->
 
 Metrics are generated before development and production builds with
 `npm run generate:language-metrics`.
+
+## Installable app and offline use
+
+On supported browsers, choose **Install this app** in Settings or use the
+browser's **Add to Home Screen** option. After the first online visit, the
+service worker caches the app shell and static assets; previously opened pages
+can then load offline. Music selected in the player is stored privately in
+that site's IndexedDB on the current device. Browsers with the File System
+Access API use its audio picker; other browsers keep the standard file picker.
+Push notifications need a backend and are not enabled yet.
 
 ## License
 

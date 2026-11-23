@@ -22,6 +22,7 @@ import {
   X,
 } from 'lucide-react';
 import MusicPlayer from './components/MusicPlayer';
+import PwaInstallButton from './components/PwaInstallButton';
 import LanguageShowcase from './components/LanguageShowcase';
 import ProjectSourceButton from './components/ProjectSourceButton';
 import TimelinePage from './TimelinePage';
@@ -130,6 +131,10 @@ function EcoRightSidebar({
             </button>
           </section>
           <section className="settings-section">
+            <h3>Install this app</h3>
+            <PwaInstallButton />
+          </section>
+          <section className="settings-section">
             <h3>Your music</h3>
             <a className="setting-action" href="/#listen"><AudioLines size={17} /><span>Open your music library</span><ChevronRight size={15} /></a>
             <p className="settings-note">Private tracks and saved links stay in this browser on this device. They are never uploaded by this site.</p>
@@ -234,7 +239,7 @@ function EcoFooter() {
   }, []);
   return (
     <footer className="eco-footer">
-      <span className="footer-license">Made by family · © {now.getFullYear()} Noa’s Little World</span>
+      <span className="footer-license">© @eco 2026 · Made by family · Noa’s Little World</span>
       <MusicPlayer />
       <a className="footer-github-link" href={PROJECT_URL} target="_blank" rel="noreferrer" aria-label="View the family-managed project source">
         <Github size={19} />
