@@ -193,7 +193,12 @@ export default function MusicPlayer() {
       }
       graph.gain.gain.setTargetAtTime(gainLevel, graph.context.currentTime, 0.04);
       graph.bass.gain.setTargetAtTime(bassLevel, graph.context.currentTime, 0.04);
-      if (graph.context.state === 'suspended') void graph.context.resume().catch(switchToNativePlayback);
+      const context = graph.context;
+      if (context.state !== 'running') {
+        void context.resume().then(() => {
+          if (context.state !== 'running') switchToNativePlayback();
+        }).catch(switchToNativePlayback);
+      }
       setIsEnhanced(true);
       setMessage(`Power mode: ${gainLevel.toFixed(1)}× amplification, +${bassLevel} dB bass.`);
       return true;
