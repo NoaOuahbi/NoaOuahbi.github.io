@@ -7,7 +7,7 @@
          alt="Git"
          width="116"
          height="61"
-         style="object-fit:contain; vertical-align:middle; margin:12px 30px;"></a>
+         style="object-fit:contain; vertical-align:middle; margin:0px 30px;"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://www.0661619230.com"><img src="assets/LOGONFD.png"
          alt="ECO-SYS"
