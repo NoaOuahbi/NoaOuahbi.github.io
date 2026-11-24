@@ -17,7 +17,7 @@
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://opensource.org/licenses/MIT"><img src="assets/MIT.png"
          alt="MIT License"
-         width="82"
+         width="116"
          height="61"
          style="object-fit:contain; vertical-align:middle; margin:12px 30px;"></a>
 </p>
