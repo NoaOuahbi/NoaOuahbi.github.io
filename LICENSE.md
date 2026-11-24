@@ -13,7 +13,7 @@
          alt="ECO-SYS"
          width="116"
          height="116"
-         style="object-fit:scale-down; vertical-align:middle; margin:12px 30px;"></a>
+         style="object-fit:scale-down; vertical-align:middle; margin:0px 0px;"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://opensource.org/licenses/MIT"><img src="assets/MIT.png"
          alt="MIT License"
