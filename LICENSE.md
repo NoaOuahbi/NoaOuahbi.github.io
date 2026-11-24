@@ -3,29 +3,23 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <p align="center">
-  <a href="https://github.com/simoouahbiGHALINOA">
-    <img src="assets/GIT.png"
+  <a href="https://github.com/simoouahbiGHALINOA"><img src="assets/GIT.png"
          alt="Git"
          width="116"
-         height="116"
-         style="object-fit:contain; vertical-align:middle; margin:12px 30px;">
-  </a>
+         height="61"
+         style="object-fit:contain; vertical-align:middle; margin:12px 30px;"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://www.0661619230.com">
-    <img src="assets/LOGONFD.png"
+  <a href="https://www.0661619230.com"><img src="assets/LOGONFD.png"
          alt="ECO-SYS"
          width="116"
          height="116"
-         style="object-fit:contain; vertical-align:middle; margin:12px 30px;">
-  </a>
+         style="object-fit:contain; vertical-align:middle; margin:12px 30px;"></a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="assets/MIT.png"
+  <a href="https://opensource.org/licenses/MIT"><img src="assets/MIT.png"
          alt="MIT License"
-         width="116"
-         height="116"
-         style="object-fit:contain; vertical-align:middle; margin:12px 30px;">
-  </a>
+         width="82"
+         height="61"
+         style="object-fit:contain; vertical-align:middle; margin:12px 30px;"></a>
 </p>
 
 <p align="center">
