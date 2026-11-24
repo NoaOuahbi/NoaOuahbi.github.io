@@ -18,6 +18,7 @@ import {
 
 const PLAYER_KEY = 'noa-world:player';
 const PRIVATE_URLS_KEY = 'noa-world:private-urls';
+const SMALL_SCREEN_QUERY = '(max-width: 640px)';
 
 interface PlayerTrack {
   id: string;
@@ -201,7 +202,9 @@ export default function MusicPlayer() {
   const syncLeaderRef = useRef(false);
   const syncOwnerRef = useRef<string | null>(null);
   const playFromSyncRef = useRef<() => void>(() => {});
-  const [useNativePlayback, setUseNativePlayback] = useState(false);
+  const [useNativePlayback, setUseNativePlayback] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia(SMALL_SCREEN_QUERY).matches,
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
   const [urlTitle, setUrlTitle] = useState('');
@@ -222,7 +225,7 @@ export default function MusicPlayer() {
   const volumeBass = volumeBoost * 18;
   activeTrackRef.current = activeTrack;
 
-  const switchToNativePlayback = useCallback(() => {
+  const switchToNativePlayback = useCallback((showNotice = true) => {
     const element = audio.current;
     if (element && activeTrack) {
       restoredTrack.current = activeTrack.id;
@@ -231,8 +234,17 @@ export default function MusicPlayer() {
     }
     setUseNativePlayback(true);
     if (element) element.volume = Math.min(volumePercent, 100) / 100;
-    setMessage('Volume boost is unavailable for this track; standard volume is available.');
+    if (showNotice) setMessage('Volume boost is unavailable for this track; standard volume is available.');
   }, [activeTrack, volumePercent]);
+
+  useEffect(() => {
+    const smallScreen = window.matchMedia(SMALL_SCREEN_QUERY);
+    const useNativeOnSmallScreen = (event: MediaQueryListEvent) => {
+      if (event.matches) switchToNativePlayback(false);
+    };
+    smallScreen.addEventListener('change', useNativeOnSmallScreen);
+    return () => smallScreen.removeEventListener('change', useNativeOnSmallScreen);
+  }, [switchToNativePlayback]);
 
   const enableAudioEnhancement = useCallback((gainLevel = volumeGain, bassLevel = volumeBass) => {
     const element = audio.current;
@@ -252,7 +264,7 @@ export default function MusicPlayer() {
       if (context.state !== 'running') {
         void context.resume().then(() => {
           if (context.state !== 'running') switchToNativePlayback();
-        }).catch(switchToNativePlayback);
+        }).catch(() => switchToNativePlayback());
       }
       setMessage('');
       return true;
