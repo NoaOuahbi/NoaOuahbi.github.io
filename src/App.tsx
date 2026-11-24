@@ -144,22 +144,70 @@ function EcoRightSidebar({
 }
 
 function HomePage() {
+  const [isAvatarOpen, setIsAvatarOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isAvatarOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsAvatarOpen(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isAvatarOpen]);
+
   return (
     <main id="main" className="page-main" tabIndex={-1}>
       <section className="hero-section">
         <div className="hero-content">
           <p className="eyebrow">A FAMILY-MANAGED LITTLE WORLD</p>
-          <h1>Welcome to <span>Noa’s world.</span><br />A place for <span className="gradient-text">wonder.</span></h1>
+          <div className="hero-heading-row">
+            <h1>Welcome to <span>Noa’s world.</span><br />A place for <span className="gradient-text">wonder.</span></h1>
+            <button
+              className="hero-avatar-button"
+              type="button"
+              onClick={() => setIsAvatarOpen(true)}
+              aria-label="Enlarge the illustrated baby avatar"
+            >
+              <img className="hero-avatar" src="/assets/noa-baby-avatar.svg" alt="Illustrated baby avatar placeholder" />
+            </button>
+          </div>
           <p className="hero-subtitle">A gentle family space celebrating everyday moments, playful discoveries, stories, music, and the people who make Noa feel loved.</p>
           <div className="hero-actions">
             <a className="primary-button" href="/about.html">About this little world <ArrowUpRight size={16} /></a>
-            <ProjectSourceButton />
+            <div className="follow-action">
+              <ProjectSourceButton />
+              <p className="follow-click-note">Family-managed project source; this link opens the public repository.</p>
+            </div>
             <a className="secondary-button" href="#listen"><AudioLines size={16} /> Visit the music corner</a>
           </div>
           <p className="hero-caption">Family-managed · child privacy first · shared with care</p>
         </div>
         <div className="hero-orbit" aria-hidden="true"><span /><span /><span /></div>
       </section>
+      {isAvatarOpen && (
+        <div
+          className="avatar-lightbox"
+          role="presentation"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) setIsAvatarOpen(false);
+          }}
+        >
+          <div className="avatar-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Illustrated baby avatar">
+            <button
+              className="avatar-lightbox-close"
+              type="button"
+              onClick={() => setIsAvatarOpen(false)}
+              aria-label="Close enlarged avatar"
+              autoFocus
+            >
+              <X size={24} />
+            </button>
+            <img src="/assets/noa-baby-avatar.svg" alt="Illustrated baby avatar placeholder" />
+          </div>
+        </div>
+      )}
 
       <section className="content-section intro-section" id="little-world">
         <div className="section-heading"><span className="eyebrow">A SMALL SPACE WITH ROOM TO GROW</span><h2>Little moments. Many possibilities.</h2><p>This family-made corner celebrates the simple things that make childhood special: care, curiosity, imagination, and discovery.</p></div>

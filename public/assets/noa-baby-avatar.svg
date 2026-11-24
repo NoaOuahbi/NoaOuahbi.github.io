@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title description">
+  <title id="title">Illustrated infant avatar placeholder</title>
+  <desc id="description">A gentle, original baby illustration on a soft blue background.</desc>
+  <defs>
+    <linearGradient id="blanket" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#b9ddff"/>
+      <stop offset="1" stop-color="#718bf0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="160" cy="160" r="152" fill="#e8f4ff"/>
+  <circle cx="65" cy="78" r="8" fill="#f3c567"/>
+  <circle cx="255" cy="96" r="6" fill="#8f9cf5"/>
+  <path d="M39 285c8-58 52-89 121-89s113 31 121 89v23H39z" fill="url(#blanket)"/>
+  <path d="M92 282c23-22 44-32 68-32s45 10 68 32" fill="none" stroke="#e8f4ff" stroke-linecap="round" stroke-width="8" opacity=".8"/>
+  <ellipse cx="160" cy="145" rx="66" ry="73" fill="#d99c78"/>
+  <path d="M96 134c1-43 27-72 64-72 34 0 61 28 64 69-18-4-31-16-39-31-20 23-51 35-89 34z" fill="#26324b"/>
+  <path d="M128 150v2m64-2v2" stroke="#26324b" stroke-linecap="round" stroke-width="8"/>
+  <path d="M145 178c9 8 21 8 30 0" fill="none" stroke="#9f5260" stroke-linecap="round" stroke-width="5"/>
+  <path d="M119 213c11-12 25-18 41-18s30 6 41 18l-16 29h-50z" fill="#fff1d2"/>
+  <circle cx="160" cy="226" r="6" fill="#f3c567"/>
+</svg>
