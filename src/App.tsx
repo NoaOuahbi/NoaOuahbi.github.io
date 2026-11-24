@@ -51,7 +51,7 @@ function EcoHeader({
         <button className="icon-button toggle-button" type="button" onClick={onToggleLeft} aria-label="Toggle navigation" aria-expanded={leftOpen} title="Toggle navigation (Ctrl+B)">
           {leftOpen ? <PanelLeftClose size={19} /> : <PanelLeftOpen size={19} />}
         </button>
-        <a className="brand" href="/" aria-label="Noa's Little World home"><span className="brand-mark">NOA</span><span className="brand-label">LITTLE WORLD</span></a>
+        <a className="brand" href="/" aria-label="Noa's Little World home"><span className="brand-mark">ECO</span><span className="brand-label">LITTLE WORLD</span></a>
         <nav className="header-nav" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/about.html">Our story</a>
