@@ -3,7 +3,7 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <p align="center">
-  <a href="https://github.com/simoouahbiGHALINOA"><img src="assets/GIT.png"
+  <a href="https://docs.github.com/en/site-policy"><img src="assets/GIT.png"
          alt="Git"
          width="116"
          height="61"
@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  <strong>ECO-SYS</strong> · An independent ecosystem by <a href="https://github.com/ADALIGO">simoouahbiGHALINOA</a>
+  <strong>ECO-SYS</strong> · An independent ecosystem by <a href="https://github.com/simoouahbiGHALINOA">simoouahbiGHALINOA</a>
   <br>
   <sub>Open source foundation · Independent development · Community collaboration</sub>
 </p>
@@ -39,7 +39,7 @@
   &nbsp;•&nbsp;
   <a href="https://www.0661619230.com">Official ECO-SYS Website</a>
   &nbsp;•&nbsp;
-  <a href="https://github.com/ADALIGO">ECO-SYS Owner</a>
+  <a href="https://github.com/simoouahbiGHALINOA">ECO-SYS Owner</a>
 </p>
 
 <p align="center">
