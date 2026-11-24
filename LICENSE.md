@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  <strong>ECO-SYS</strong> · An independent ecosystem by <a href="https://github.com/ADALIGO">ADALIGO</a>
+  <strong>ECO-SYS</strong> · An independent ecosystem by <a href="https://github.com/ADALIGO">simoouahbiGHALINOA</a>
   <br>
   <sub>Open source foundation · Independent development · Community collaboration</sub>
 </p>
