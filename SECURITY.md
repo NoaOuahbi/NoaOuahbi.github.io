@@ -1,31 +1,40 @@
 # Security and privacy
 
-This is a family-managed public website. Keep private family information out of
-the repository and public pages, including exact age, school, location,
-routines, contact details, and private account information.
+## Scope and ownership
 
-## Family sign-in
+This family-managed public website is maintained by
+[@NoaOuahbi](https://github.com/NoaOuahbi) as part of the ECO-SYS ecosystem.
+Keep exact age, school, location, routines, contact details, private media,
+and private account information out of public pages and repository content.
 
-The optional API supports GitHub OAuth only for guardian-approved adult
-accounts. It denies all accounts unless `ALLOWED_GITHUB_LOGINS` is configured
-with the approved login names. Never add a child's account to this allowlist.
-OAuth secrets and database credentials belong only in the API host's
-environment or ignored local `.env` files.
+The static website is public. Hiding a route or source file is not access
+control; private data and protected actions must be authorized by the API on
+every request.
 
-The API does not store GitHub access tokens. It stores approved adult profile
-details and hashes of random session tokens in the configured database. The
-static website works without the API; the family area stays unavailable until
-the service is configured.
+## Family account access
+
+The repository owner and guardian approve maintainers and accounts allowed to
+use protected family features. The API must enforce exact
+`ALLOWED_GITHUB_LOGINS` values and deny access if the allowlist is missing,
+empty, or invalid. Never add a child's account to the allowlist. A valid
+GitHub login or access to the public repository does not imply approval.
+
+Keep OAuth client secrets and database credentials only in the API host's
+environment or ignored local `.env` files. Do not store GitHub access tokens in
+the database, browser storage, logs, or source control. Limit OAuth,
+repository, database, and hosting access to approved adults who need it.
 
 ## Media and local storage
 
-Only add guardian-approved media. The music player keeps visitor-selected
-files and preferences in that visitor's browser; it does not upload those
-files to the project API.
+Publish only guardian-approved media that is licensed for use. Visitor-selected
+files and playback preferences stay in that visitor's browser; do not assume
+they are encrypted or uploaded by the site. Do not put private links or
+personal information in playlists or public profile fields.
 
-## Reporting an issue
+## Vulnerability reporting
 
-Please do not publish details of an unpatched security issue in a public
-discussion. Use the repository's private vulnerability reporting feature when
-available. Do not include passwords, tokens, private URLs, or children's
-personal information in a report.
+Do not publish unpatched vulnerability details in a public issue or
+discussion. Use this repository's GitHub private vulnerability reporting when
+available. Otherwise, contact
+[@NoaOuahbi](https://github.com/NoaOuahbi) privately. Do not include
+credentials, private URLs, or children's personal information in reports.
