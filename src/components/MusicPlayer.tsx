@@ -516,7 +516,9 @@ export default function MusicPlayer() {
       setNeedsResume(autoplayBlocked);
       setMessage(autoplayBlocked
         ? 'Autoplay was blocked. Click or tap anywhere to start music.'
-        : 'This track could not be played. Check that the audio file or URL is available.');
+        : activeTrack.kind === 'shared'
+          ? 'This shared audio could not be loaded. Confirm the original site finished uploading it, and that your browser supports its format.'
+          : 'This track could not be played. Check that the audio file or URL is available.');
       if (syncLeaderRef.current && syncConnection.current) {
         syncLeaderRef.current = false;
         syncOwnerRef.current = null;
