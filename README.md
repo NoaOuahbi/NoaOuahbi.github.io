@@ -57,10 +57,10 @@ See [`SECURITY.md`](./SECURITY.md) for reporting and configuration details.
 <!-- language-metrics:start -->
 | Language | Equal starter share | Measured source share | Files | File types | Starter |
 |----------|---------------------|-----------------------|-------|------------|---------|
-| 🦀 Rust | 12.5% | 1.4% | 1 | `.rs` | [Open](./starters/rust/README.md) |
+| 🦀 Rust | 12.5% | 1.3% | 1 | `.rs` | [Open](./starters/rust/README.md) |
 | 🐹 Go | 12.5% | 1.2% | 2 | `.go` | [Open](./starters/go/README.md) |
 | 🐍 Python | 12.5% | 2.8% | 4 | `.py` | [Open](./starters/python/README.md) |
-| 🔷 TypeScript | 12.5% | 63.0% | 23 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
+| 🔷 TypeScript | 12.5% | 63.1% | 23 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
 | ⚡ JavaScript | 12.5% | 1.2% | 4 | `.js, .mjs, .cjs` | [Open](./starters/javascript/README.md) |
 | 🗃️ SQL | 12.5% | 1.0% | 5 | `.sql` | [Open](./starters/sql/README.md) |
 | 🎨 CSS | 12.5% | 28.4% | 5 | `.css` | [Open](./starters/css/README.md) |
