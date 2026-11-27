@@ -184,7 +184,6 @@ function HomePage() {
           </div>
           <p className="hero-caption">Family-managed · child privacy first · shared with care</p>
         </div>
-        <div className="hero-orbit" aria-hidden="true"><span /><span /><span /></div>
       </section>
       {isAvatarOpen && (
         <div
