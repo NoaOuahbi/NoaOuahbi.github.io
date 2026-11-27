@@ -5,8 +5,7 @@
   "description": "A family-managed little world for curiosity, imagination, and everyday moments.",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display": "browser",
   "background_color": "#050608",
   "theme_color": "#050608",
   "icons": [
