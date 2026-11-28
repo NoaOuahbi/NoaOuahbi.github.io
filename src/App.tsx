@@ -186,7 +186,11 @@ function HomePage() {
           <p className="hero-caption">Family-managed · child privacy first · shared with care</p>
         </div>
       </section>
-      <ContributionWeekEmbed site="noaouahbi" />
+      <ContributionWeekEmbed
+        site="noaouahbi"
+        repository="NoaOuahbi/NoaOuahbi.github.io"
+        branch="main"
+      />
       {isAvatarOpen && (
         <div
           className="avatar-lightbox"
