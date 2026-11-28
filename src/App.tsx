@@ -163,7 +163,7 @@ function HomePage() {
         <div className="hero-content">
           <p className="eyebrow">A FAMILY-MANAGED LITTLE WORLD</p>
           <div className="hero-heading-row">
-            <h1>Welcome to <span>Noa’s world.</span><br />A place for <span className="gradient-text">wonder.</span></h1>
+            <h1>Hi, I’m <span>Noa.</span><br /><span className="gradient-text">I make room for wonder.</span></h1>
             <button
               className="hero-avatar-button"
               type="button"
@@ -180,7 +180,7 @@ function HomePage() {
               <ProjectSourceButton />
               <p className="follow-click-note">Family-managed project source; this link opens the public repository.</p>
             </div>
-            <a className="secondary-button" href="#listen"><AudioLines size={16} /> Visit the music corner</a>
+            <a className="secondary-button" href="#listen"><AudioLines size={16} /> Listen with me</a>
           </div>
           <p className="hero-caption">Family-managed · child privacy first · shared with care</p>
         </div>
