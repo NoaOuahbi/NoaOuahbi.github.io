@@ -61,6 +61,7 @@ a { color: inherit; }
 .header-nav a, .header-link { color: var(--muted); font-size: 0.78rem; font-weight: 600; text-decoration: none; transition: color 160ms ease; }
 .header-nav a:hover, .header-link:hover { color: var(--text); }
 .header-link { display: inline-flex; align-items: center; gap: 0.4rem; }
+.github-link .repo-badge { display: inline-flex; align-items: center; padding: 0.08rem 0.35rem; border: 1px solid var(--accent-border); border-radius: 999px; background: var(--accent-soft); color: var(--text); line-height: 1.2; }
 .main-container { position: fixed; z-index: 1; top: var(--header-total-height); right: 0; bottom: var(--footer-total-height); left: 0; display: flex; min-height: 0; width: 100%; overflow: hidden; }
 
 .left-sidebar, .right-sidebar { position: relative; z-index: 12; flex: 0 0 0; width: 0; overflow: hidden; background: var(--bg-raised); backdrop-filter: blur(16px); transition: width 220ms ease, flex-basis 220ms ease; }

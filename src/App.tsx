@@ -35,6 +35,15 @@ const PROJECT_URL = 'https://github.com/NoaOuahbi/NoaOuahbi.github.io';
 const PROTECTED_USERS_URL = '/protectedUSERS_root_path_secure/';
 const SOURCE_URL = PROJECT_URL;
 
+function ThemeModeIcon({ className = '' }: { className?: string }) {
+  return (
+    <>
+      <img className={`brand-mode-icon brand-logo-dark ${className}`} src="/icons/LOGOO-outline-avatar-white.png" alt="" aria-hidden="true" />
+      <img className={`brand-mode-icon brand-logo-light ${className}`} src="/icons/LOGOO-outline-avatar-black.png" alt="" aria-hidden="true" />
+    </>
+  );
+}
+
 function EcoHeader({
   leftOpen,
   rightOpen,
@@ -52,7 +61,7 @@ function EcoHeader({
         <button className="icon-button toggle-button" type="button" onClick={onToggleLeft} aria-label="Toggle navigation" aria-expanded={leftOpen} title="Toggle navigation (Ctrl+B)">
           {leftOpen ? <PanelLeftClose size={19} /> : <PanelLeftOpen size={19} />}
         </button>
-        <a className="brand" href="/" aria-label="Noa's Little World home"><span className="brand-mark">ECO</span><span className="brand-label">LITTLE WORLD</span></a>
+        <a className="brand" href="/" aria-label="Noa's Little World home"><span className="brand-mark" aria-hidden="true"><img className="brand-micro-icon" src="/icons/LOGOO-outline-avatar-micro-sky.png" alt="" /></span><span className="brand-label">ECO</span></a>
         <nav className="header-nav" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/about.html">Our story</a>
@@ -60,8 +69,8 @@ function EcoHeader({
         </nav>
       </div>
       <div className="header-side header-side-right">
-        <a className="header-link github-link" href={PROJECT_URL} target="_blank" rel="noreferrer" aria-label="Open the family-managed Git repository"><Github size={16} /><span>Git repo</span></a>
-        <a className="header-link github-link" href="https://github.com/simoouahbiGHALINOA/HYPERSCALE-ecosystem" target="_blank" rel="noreferrer" aria-label="Open the ECO ecosystem repository" title="ECO repository"><span className="brand-mark" aria-hidden="true">ECO</span><span>ECO repo</span></a>
+        <a className="header-link github-link repositories-link" href={PROJECT_URL} target="_blank" rel="noreferrer" aria-label="Open the family-managed Git repository"><Github size={16} /><span className="repository-label">Git repo</span></a>
+        <a className="header-link github-link" href="https://github.com/simoouahbiGHALINOA/HYPERSCALE-ecosystem" target="_blank" rel="noreferrer" aria-label="Open the ECO ecosystem repository" title="ECO repository"><span className="brand-mark" aria-hidden="true"><img className="brand-micro-icon" src="/icons/LOGOO-outline-avatar-micro-sky.png" alt="" /></span><span className="repo-badge">repo</span></a>
         <a className="icon-button toggle-button" href={PROTECTED_USERS_URL} aria-label="Open the family-only area" title="Family-only area"><UserPlus size={19} /></a>
         <button className="icon-button toggle-button right-toggle" type="button" onClick={onToggleRight} aria-label="Toggle right sidebar" aria-expanded={rightOpen} title="Toggle right sidebar (Ctrl+M)">
           {rightOpen ? <PanelRightClose size={19} /> : <PanelRightOpen size={19} />}
@@ -174,7 +183,7 @@ function HomePage() {
           </div>
           <p className="hero-subtitle">A gentle family space celebrating everyday moments, playful discoveries, stories, music, and the people who make Noa feel loved.</p>
           <div className="hero-actions">
-            <a className="primary-button" href="/about.html">About this little world <ArrowUpRight size={16} /></a>
+            <a className="primary-button logo-button" href="/about.html"><ThemeModeIcon /> About this little world <ArrowUpRight size={16} /></a>
             <div className="follow-action">
               <ProjectSourceButton />
               <p className="follow-click-note">Family-managed project source; this link opens the public repository.</p>
@@ -243,7 +252,10 @@ function HomePage() {
 
       <section className="content-section source-section">
         <div><span className="eyebrow">MADE BY FAMILY</span><h2>Shared with care.</h2><p>This website is managed by family and keeps personal details private. It has no public contact form, comments, or child account.</p></div>
-        <a className="secondary-button" href="/about.html">Learn about the project <ArrowUpRight size={15} /></a>
+        <div className="hero-actions">
+          <a className="secondary-button" href="/about.html">Learn about the project <ArrowUpRight size={15} /></a>
+          <a className="secondary-button logo-button" href="https://github.com/simoouahbiGHALINOA/HYPERSCALE-ecosystem" target="_blank" rel="noreferrer"><ThemeModeIcon /> View ECO Projects <ArrowUpRight size={15} /></a>
+        </div>
       </section>
     </main>
   );
